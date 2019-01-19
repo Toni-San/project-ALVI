@@ -5,3 +5,9 @@ html body {
 * {
     font-family: 'Roboto', sans-serif;
 }
+.width {
+    width: 100%;
+}
+.color-top {
+    background-color: #1f1f1f;
+}
