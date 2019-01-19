@@ -1,3 +1,4 @@
+/*all*/
 html body {
     font-family: 'Roboto', sans-serif;
 }
@@ -11,3 +12,35 @@ html body {
 .color-top {
     background-color: #1f1f1f;
 }
+/*all*/
+/*block none start*/
+.menu {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu li {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu li:hover {
+    cursor: pointer;
+}
+.menu a {
+    color: #ffffff;
+    font-weight: 300;
+}
+.triangle {
+    width: 10px;
+    border: solid 10px transparent;
+    /*border-bottom-color: #ffffff;*/
+}
+.menu li:hover .triangle {
+    border-bottom-color: #ffffff;
+}
+/*block none end*/
