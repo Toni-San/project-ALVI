@@ -1,4 +1,4 @@
-/*all*/
+/*all start*/
 html body {
     font-family: 'Roboto', sans-serif;
 }
@@ -6,22 +6,82 @@ html body {
 * {
     font-family: 'Roboto', sans-serif;
 }
-.width {
-    width: 100%;
+.main-background {
+    background-image: url("../images/main-background.png");
+    background-size: cover;
 }
-.color-top {
+.mu-row {
+    align-items: center;
+    justify-content: center;
+}
+/*all end*/
+/*block menu start*/
+.menu-background {
+    width: 100%;
     background-color: #1f1f1f;
 }
-/*all*/
-/*block none start*/
+/*burger start*/
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+    border: solid 2px #ffffff;
+    border-radius: 3px;
+    padding: 3px;
+}
+.burger:hover {
+    cursor: pointer;
+    border-color: #be416a;
+}
+.burger:hover .burger-line-1 {
+    transform: rotate(180deg);
+    transition: 1s;
+}
+.burger:hover .burger-line-2 {
+    transform: rotate(-180deg);
+    transition: 1s;
+}
+.burger:hover .burger-line-3 {
+    transform: rotate(180deg);
+    transition: 1s;
+}
+.burger-line-1 {
+    width: 40px;
+    border: solid 1px #ffffff;
+    /*background-color: #ffffff;*/
+    border-radius: 1px;
+}
+.burger-line-2 {
+    width: 40px;
+    border: solid 1px #ffffff;
+    /*background-color: #ffffff;*/
+    border-radius: 1px;
+}
+.burger-line-3 {
+    width: 40px;
+    border: solid 1px #ffffff;
+    /*background-color: #ffffff;*/
+    border-radius: 1px;
+}
+@media (min-width: 992px) {
+    .burger {
+        display: none;
+    }
+}
+/*burger end*/
 .menu {
     margin: 0;
+    padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .menu li {
+    margin: 10px;
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -43,4 +103,12 @@ html body {
 .menu li:hover .triangle {
     border-bottom-color: #ffffff;
 }
-/*block none end*/
+@media (max-width: 991px) {
+    .mu-row {
+        justify-content: flex-end;
+    }
+    .menu {
+        display: none;
+    }
+}
+/*block menu end*/
