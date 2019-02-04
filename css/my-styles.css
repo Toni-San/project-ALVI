@@ -22,7 +22,8 @@ html body {
 }
 /*burger start*/
 .burger {
-    display: flex;
+    /*display: flex;*/
+    display: block;
     flex-direction: column;
     justify-content: space-around;
     width: 50px;
@@ -31,22 +32,49 @@ html body {
     border: solid 2px #ffffff;
     border-radius: 3px;
     padding: 3px;
+    position: relative;
+}
+.burger .burger-line-1, .burger .burger-line-2, .burger .burger-line-3 {
+    position: absolute;
+    transition: 1s;
+}
+.burger .burger-line-1 {
+    top: 6px;
+    left: 50%;
+    margin-left: -20px;
+}
+.burger .burger-line-2 {
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -20px;
+}
+.burger .burger-line-3 {
+    top: 28px;
+    left: 50%;
+    margin-left: -20px;
 }
 .burger:hover {
     cursor: pointer;
     border-color: #be416a;
+    display: block;
+    position: relative;
+}
+.burger:hover .burger-line-1, .burger:hover .burger-line-2, .burger:hover .burger-line-3 {
+    top: 50%;
+    margin-top: -1px;
+    margin-left: -20px;
+    left: 50%;
+    transform: rotate(0deg);
 }
 .burger:hover .burger-line-1 {
-    transform: rotate(180deg);
-    transition: 1s;
+    transform: rotate(45deg);
 }
 .burger:hover .burger-line-2 {
-    transform: rotate(-180deg);
-    transition: 1s;
+    display: none;
 }
 .burger:hover .burger-line-3 {
-    transform: rotate(180deg);
-    transition: 1s;
+    transform: rotate(-45deg);
 }
 .burger-line-1 {
     width: 40px;
@@ -66,11 +94,11 @@ html body {
     /*background-color: #ffffff;*/
     border-radius: 1px;
 }
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
     .burger {
         display: none;
     }
-}
+}*/
 /*burger end*/
 .menu {
     margin: 0;
@@ -95,14 +123,16 @@ html body {
     color: #ffffff;
     font-weight: 300;
 }
-.triangle {
-    width: 10px;
+.menu>li:after {
+    content: '';
+    display: inline-block;
     border: solid 10px transparent;
-    /*border-bottom-color: #ffffff;*/
+    transition: .5s;
 }
-.menu li:hover .triangle {
+.menu li:hover:after {
     border-bottom-color: #ffffff;
 }
+/*
 @media (max-width: 991px) {
     .my-row {
         justify-content: flex-end;
@@ -111,4 +141,5 @@ html body {
         display: none;
     }
 }
+*/
 /*block menu end*/
