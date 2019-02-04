@@ -10,7 +10,7 @@ html body {
     background-image: url("../images/main-background.png");
     background-size: cover;
 }
-.mu-row {
+.my-row {
     align-items: center;
     justify-content: center;
 }
@@ -104,7 +104,7 @@ html body {
     border-bottom-color: #ffffff;
 }
 @media (max-width: 991px) {
-    .mu-row {
+    .my-row {
         justify-content: flex-end;
     }
     .menu {
