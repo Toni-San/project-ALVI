@@ -10,9 +10,8 @@ html body {
     background-image: url("../images/main-background.png");
     background-size: cover;
 }
-.my-row {
+.my-row-menu {
     align-items: center;
-    justify-content: center;
 }
 /*all end*/
 /*block menu start*/
@@ -22,7 +21,6 @@ html body {
 }
 /*burger start*/
 .burger {
-    /*display: flex;*/
     display: block;
     flex-direction: column;
     justify-content: space-around;
@@ -33,6 +31,15 @@ html body {
     border-radius: 3px;
     padding: 3px;
     position: relative;
+}
+.burger:hover {
+    cursor: pointer;
+    border-color: #be416a;
+}
+.burger-line-1, .burger-line-2, .burger-line-3 {
+    width: 40px;
+    border: solid 1px #ffffff;
+    border-radius: 1px;
 }
 .burger .burger-line-1, .burger .burger-line-2, .burger .burger-line-3 {
     position: absolute;
@@ -54,12 +61,6 @@ html body {
     left: 50%;
     margin-left: -20px;
 }
-.burger:hover {
-    cursor: pointer;
-    border-color: #be416a;
-    display: block;
-    position: relative;
-}
 .burger:hover .burger-line-1, .burger:hover .burger-line-2, .burger:hover .burger-line-3 {
     top: 50%;
     margin-top: -1px;
@@ -76,25 +77,10 @@ html body {
 .burger:hover .burger-line-3 {
     transform: rotate(-45deg);
 }
-.burger-line-1 {
-    width: 40px;
-    border: solid 1px #ffffff;
-    /*background-color: #ffffff;*/
-    border-radius: 1px;
-}
-.burger-line-2 {
-    width: 40px;
-    border: solid 1px #ffffff;
-    /*background-color: #ffffff;*/
-    border-radius: 1px;
-}
-.burger-line-3 {
-    width: 40px;
-    border: solid 1px #ffffff;
-    /*background-color: #ffffff;*/
-    border-radius: 1px;
-}
 /*@media (min-width: 992px) {
+    .my-row-menu {
+        justify-content: center;
+    }
     .burger {
         display: none;
     }
@@ -132,14 +118,15 @@ html body {
 .menu li:hover:after {
     border-bottom-color: #ffffff;
 }
-/*
-@media (max-width: 991px) {
-    .my-row {
-        justify-content: flex-end;
+/*@media (max-width: 991px) {
+    .my-row-menu {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
     }
     .menu {
         display: none;
     }
-}
-*/
+}*/
 /*block menu end*/
