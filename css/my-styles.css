@@ -77,20 +77,13 @@ html body {
 .burger:hover .burger-line-3 {
     transform: rotate(-45deg);
 }
-/*@media (min-width: 992px) {
-    .my-row-menu {
-        justify-content: center;
-    }
-    .burger {
-        display: none;
-    }
-}*/
 /*burger end*/
+/*menu start*/
 .menu {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
 }
@@ -118,15 +111,15 @@ html body {
 .menu li:hover:after {
     border-bottom-color: #ffffff;
 }
-/*@media (max-width: 991px) {
+/*block menu end*/
+@media (min-width: 992px) {
     .my-row-menu {
-        flex-direction: column;
-        align-items: flex-end;
         justify-content: center;
-
     }
-    .menu {
+    .burger {
         display: none;
     }
-}*/
-/*block menu end*/
+    .menu{
+        display: flex !important;
+    }
+}
