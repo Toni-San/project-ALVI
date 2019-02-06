@@ -15,8 +15,14 @@ html body {
 .my-row-menu {
     align-items: center;
 }
-
 /*?*/
+/*.shadow {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+}*/
+.background-all-blocks {
+    background-color: #ffffff;
+}
 /*all end*/
 /*block menu start*/
 .menu-background {
@@ -150,19 +156,49 @@ header {
     background-repeat: no-repeat;
 }
 .my-row-header {
-
+    flex-direction: column;
+    height: 320px;
+    justify-content: space-around;
 }
-.logo {
+
+/*.logo {
     border-radius: 50%;
     background: radial-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .9));
+}*/
+.button {
+    display: flex;
+    justify-content: flex-end;
 }
-form>input {
-    width: 144px;
+
+header form > input {
+    width: 145px;
     height: 47px;
     margin: 0;
     border: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0);
     background-image: url("../images/button.png");
+    cursor: pointer;
 }
 /*header end*/
+/*main*/
+.my-row-main {
+    flex-direction: column;
+    align-items: center;
+}
+
+main article {
+    max-width: 800px;
+    /*height: 70px;*/
+    color: #5790dc;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 5px;
+}
+main article>div {
+    text-align: end;
+}
+main article>div>a {
+    color: gray;
+}
+/*main*/
